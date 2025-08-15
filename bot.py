@@ -1,6 +1,7 @@
 import os
 import sys
 import config
+from config import *
 import pyromod.listen
 from pyrogram import Client, enums
 from pyrogram.enums import ParseMode
