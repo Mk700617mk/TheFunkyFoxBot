@@ -10,7 +10,7 @@ API_HASH = getenv("API_HASH", "2f4948dc659e5af3f87bfc8baba6b921")
 BOT_TOKEN = getenv("BOT_TOKEN", "6086645204:AAHe3eyFhCwNjGGso3b1tCBHpW0iWCdgXxw")
 CHANNEL_ID = int(getenv("CHANNEL_ID", "-1001914497289"))
 OWNER_ID = list(map(int, getenv("SUDO_USERS", "6109551937 5416887843 6018550523").split()))
-DB_URI = getenv("DATABASE_URL", "mongodb+srv://gareebk06:BYkppVuBAFg3qvb1@cluster0.3hsto05.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+DB_URI = getenv("DATABASE_URL", "postgres://rtzsspzt:DLuJvx8TQGqYqt0XKR9CDnLZmRs6UMr3@berry.db.elephantsql.com/rtzsspzt")
 FORCE_SUB_CHANNEL = int(getenv("FORCE_SUB_CHANNEL", "-1001831916389"))
 BOT_WORKERS = int(getenv("BOT_WORKERS", "5"))
 
