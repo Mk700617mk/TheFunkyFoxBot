@@ -1,11 +1,12 @@
-FROM python:3.10.4-slim-buster
-RUN apt update && apt upgrade -y
-RUN apt-get -y install git
-RUN apt-get install -y wget python3-pip curl bash neofetch ffmpeg software-properties-common
-COPY requirements.txt .
+FROM python:3.10.8-slim-buster
 
-RUN pip3 install wheel
-RUN pip3 install --no-cache-dir -U -r requirements.txt
-WORKDIR /app
-COPY . .
-CMD gunicorn app:app & python3 main.py
+RUN apt update && apt upgrade -y
+RUN apt install git -y
+COPY requirements.txt /requirements.txt
+
+RUN cd /
+RUN pip3 install -U pip && pip3 install -U -r requirements.txt
+RUN mkdir /TheMovieProviderBot
+WORKDIR /TheMovieProviderBot
+COPY start.sh /start.sh
+CMD ["/bin/bash", "/start.sh"]
